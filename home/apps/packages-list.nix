@@ -8,6 +8,8 @@
     rofi-wayland
     pavucontrol
     chromium
+    networkmanagerapplet
+    openvpn
 
     # Thunar
     xfce.thunar
