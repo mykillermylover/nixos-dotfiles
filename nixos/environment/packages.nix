@@ -10,7 +10,6 @@
     tree
     firefox
     kitty
-    sddm-astronaut
     brightnessctl
 
     # Default themes
