@@ -7,5 +7,6 @@
     ./apps.nix
 
     ./gtk.nix
+    ./xdg.nix
   ];
 }

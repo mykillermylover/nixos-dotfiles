@@ -10,6 +10,14 @@
     pavucontrol
     chromium
 
+    # Thunar
+    xfce.thunar
+    xfce.thunar-volman
+    xfce.thunar-archive-plugin
+    xfce.thunar-media-tags-plugin
+    xfce.tumbler
+    kdePackages.ark
+
     # theme
     nwg-look
     graphite-kde-theme
@@ -23,7 +31,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.meslo-lg
     noto-fonts-color-emoji
-    
+
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
 
     fastfetch

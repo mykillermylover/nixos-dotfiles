@@ -2,6 +2,6 @@
 {
   imports = [ 
     ./packages.nix
-    ./env.nix
+    ./variables.nix
   ];
 }

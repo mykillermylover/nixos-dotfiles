@@ -35,6 +35,10 @@
     sysctl."net.ipv6.conf.all.forwarding" = "1";
   };
 
+  boot.extraModprobeConfig = ''
+    options hid_apple fnmode=0
+  '';
+  
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
 
