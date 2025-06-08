@@ -18,7 +18,6 @@ in
       package = pkgs.kdePackages.sddm;
 
       settings = {
-        General.DefaultSession = "Hyprland";
         Theme.Current = "sddm-astronaut-theme";
       };
 
