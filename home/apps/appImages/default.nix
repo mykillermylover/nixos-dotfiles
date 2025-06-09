@@ -1,0 +1,7 @@
+{ ... }:
+{
+  imports = [
+    ./ktalk
+    ./squadus
+  ];
+}

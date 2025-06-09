@@ -17,6 +17,16 @@
       url = "github:ndom91/rose-pine-hyprcursor";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # squadus = {
+    #   url = "path:./appImageFlakes/squadus";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    # ktalk = {
+    #   url = "path:./appImageFlakes/ktalk";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs =
