@@ -6,6 +6,7 @@
     ./hypr
 
     ./gtk.nix
+    ./qt.nix
     ./xdg.nix
   ];
 

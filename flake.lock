@@ -130,13 +130,13 @@
         ]
       },
       "locked": {
-        "lastModified": 1749482482,
-        "narHash": "sha256-IuIKXCviMYqzD/mXqnPISZeWCANi29es1k4fwrIMXO4=",
-        "path": "/home/mihail/Apps",
+        "lastModified": 1749489690,
+        "narHash": "sha256-cGTjGYF6XQuHbo+dwoLGR43MVYQoNDpp8VAZCL6oM+I=",
+        "path": "/home/mihail/Apps/nix-apps",
         "type": "path"
       },
       "original": {
-        "path": "/home/mihail/Apps",
+        "path": "/home/mihail/Apps/nix-apps",
         "type": "path"
       }
     },

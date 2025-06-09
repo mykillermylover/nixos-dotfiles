@@ -5,5 +5,7 @@
     EDITOR = "vim";
     BROWSER = "firefox";
     TERMINAL = "kitty";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    QT_STYLE_OVERRIDE = "kvantum";
   };
 }

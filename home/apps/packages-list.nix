@@ -11,6 +11,26 @@
       chromium
       networkmanagerapplet
       openvpn
+      kdePackages.ark
+
+      libsForQt5.qtstyleplugin-kvantum
+      libsForQt5.qt5ct
+      kdePackages.qt6ct
+
+      # theme
+      graphite-kde-theme
+      graphite-gtk-theme
+      rose-pine-cursor
+      # icons
+      colloid-icon-theme
+      kdePackages.breeze-icons
+
+      # fonts
+      meslo-lgs-nf
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.meslo-lg
+      noto-fonts-color-emoji
+      noto-fonts
 
       fastfetch
       jq
