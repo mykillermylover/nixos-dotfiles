@@ -3,6 +3,7 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     ./apps
+    ./hypr
 
     ./gtk.nix
     ./xdg.nix
