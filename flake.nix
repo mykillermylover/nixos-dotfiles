@@ -18,15 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # squadus = {
-    #   url = "path:./appImageFlakes/squadus";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
-    # ktalk = {
-    #   url = "path:./appImageFlakes/ktalk";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    mshell.url = "github:mykillermylover/ags-dotfiles";
   };
 
   outputs =

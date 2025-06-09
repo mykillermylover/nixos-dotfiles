@@ -33,8 +33,7 @@
     noto-fonts-color-emoji
 
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
-    # inputs.squadus.packages.${pkgs.system}.default
-    # inputs.ktalk.packages.${pkgs.system}.default
+    inputs.mshell.packages.${pkgs.system}.default
 
     fastfetch
     jq
