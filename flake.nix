@@ -22,7 +22,7 @@
 
     # Private local repo
     my-apps = {
-      url = "path:/home/mihail/Apps";
+      url = "path:/home/mihail/Apps/nix-apps";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

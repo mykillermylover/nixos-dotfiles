@@ -14,6 +14,7 @@
     };
 
     gvfs.enable = true;
+    tumbler.enable = true;
 
     # Configure keymap in X11
     xserver.xkb = {
