@@ -123,6 +123,23 @@
         "type": "github"
       }
     },
+    "my-apps": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749481586,
+        "narHash": "sha256-0Q7WPHCAdsN66dKsCK5smxMG9YTzMJ4JyVwQE1Jysfg=",
+        "path": "/home/mihail/Apps",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/mihail/Apps",
+        "type": "path"
+      }
+    },
     "nix-vscode-extensions": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -210,6 +227,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "mshell": "mshell",
+        "my-apps": "my-apps",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_3",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor",

@@ -7,8 +7,5 @@
     ./spicetify.nix
 
     ./packages-list.nix
-
-    # AppImages
-    ./appImages
   ];
 }

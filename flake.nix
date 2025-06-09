@@ -19,6 +19,12 @@
     };
 
     mshell.url = "github:mykillermylover/ags-dotfiles";
+
+    # Private local repo
+    my-apps = {
+      url = "path:/home/mihail/Apps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
