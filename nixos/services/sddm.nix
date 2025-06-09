@@ -21,8 +21,16 @@ in
         Theme.Current = "sddm-astronaut-theme";
       };
 
-      wayland.enable = true;
+      wayland = {
+        enable = true;
+        # Needs to open sddm 
+        # on every display connected 
+        # with correct dpi
+        compositor = "kwin";
+      };
+
       theme = "sddm-astronaut-theme";
+
       extraPackages = lib.singleton sddm-astronaut;
     };
   };
