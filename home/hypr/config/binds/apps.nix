@@ -13,7 +13,8 @@
       "$mainMod, V, exec, $clipboardManager"
       "$mainMod, code:60, exec, $emojiPicker"
       "$shiftMod, C, exec, $colorPicker"
-
+      
+      "$mainMod, L, exec, hyprlock"
     ];
   };
 }

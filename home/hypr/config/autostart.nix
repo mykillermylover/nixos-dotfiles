@@ -12,7 +12,8 @@
       "mshell"
       "hypridle"
 
-      "gtk-launch ktalk-hidden.desktop"
+      "ktalk -hidden"
+      "[workspace 3 silent] squadus"
       "[workspace special silent] telegram-desktop"
 
       # clipboard manager

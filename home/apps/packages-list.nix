@@ -12,6 +12,7 @@
       networkmanagerapplet
       openvpn
       kdePackages.ark
+      fnm
 
       libsForQt5.qtstyleplugin-kvantum
       libsForQt5.qt5ct
@@ -33,7 +34,6 @@
       noto-fonts
 
       hyprpolkitagent
-      hyprlock
       hypridle
       hyprpaper
 

@@ -7,6 +7,8 @@
   };
 
   imports = [
-    ./config
+    ./config    
+
+    ./hyprlock.nix
   ];
 }
