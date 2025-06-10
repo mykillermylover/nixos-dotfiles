@@ -10,5 +10,6 @@
     ./config    
 
     ./hyprlock.nix
+    ./hypridle.nix
   ];
 }

@@ -34,7 +34,6 @@
       noto-fonts
 
       hyprpolkitagent
-      hypridle
       hyprpaper
 
       fastfetch
