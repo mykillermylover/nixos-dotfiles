@@ -11,6 +11,7 @@
     firefox
     kitty
     brightnessctl
+    gcr
 
     # Default themes
     adwaita-icon-theme
