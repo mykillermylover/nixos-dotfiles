@@ -35,7 +35,9 @@
       "center, title:^(Save As)(.*)$"
       "center, title:^(Library)(.*)$"
       "center, title:^(File Upload)(.*)$"
+      "center, title:^(Rename)(.*)$"
       "center, class:^(xdg-desktop-portal-gtk)$"
+      
       "float,  title:^(Open File)(.*)$"
       "float,  title:^(Select a File)(.*)$"
       "float,  title:^(Choose wallpaper)(.*)$"
@@ -43,6 +45,7 @@
       "float,  title:^(Save As)(.*)$"
       "float,  title:^(Library)(.*)$"
       "float,  title:^(File Upload)(.*)$"
+      "float, title:^(Rename)(.*)$"
       "float,  class:^(xdg-desktop-portal-gtk)$"
       #
       "opacity 0.999999, initialClass:obsidian"

@@ -32,6 +32,11 @@
       noto-fonts-color-emoji
       noto-fonts
 
+      hyprpolkitagent
+      hyprlock
+      hypridle
+      hyprpaper
+
       fastfetch
       jq
       eza
