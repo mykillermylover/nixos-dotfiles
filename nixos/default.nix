@@ -8,11 +8,11 @@
     ./hardware.nix
     ./networking.nix
     ./nix.nix
-    ./nixpkgs.nix
-    ./programs.nix
     ./time-locale.nix
 
+    ./apps
     ./environment
+    ./nixpkgs
     ./services
   ];
 

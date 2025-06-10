@@ -4,10 +4,7 @@
     inputs.spicetify-nix.homeManagerModules.default
     ./apps
     ./hypr
-
-    ./gtk.nix
-    ./qt.nix
-    ./xdg.nix
+    ./themes
   ];
 
   home.username = "mihail";

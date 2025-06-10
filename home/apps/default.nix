@@ -5,7 +5,9 @@
     ./vim.nix
     ./vscode.nix
     ./spicetify.nix
+    ./kitty.nix
 
     ./packages-list.nix
+    ./xdg-mimeapps.nix
   ];
 }

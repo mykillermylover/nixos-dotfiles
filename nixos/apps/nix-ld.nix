@@ -1,22 +1,6 @@
 { pkgs, ... }:
 {
   programs = {
-    hyprland.enable = true;
-    fish.enable = true;
-    appimage.enable = true;
-    appimage.binfmt = true;
-
-    thunar = {
-      enable = true;
-
-      plugins = with pkgs.xfce; [
-        thunar-archive-plugin
-        thunar-volman
-        thunar-media-tags-plugin
-        tumbler
-      ];
-    };
-
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [
       SDL
@@ -137,11 +121,5 @@
       gcr_4
       libsecret
     ];
-
-    seahorse.enable = true;
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
   };
 }
