@@ -13,6 +13,7 @@
       openvpn
       kdePackages.ark
       fnm
+      qbittorrent-enhanced
 
       libsForQt5.qtstyleplugin-kvantum
       libsForQt5.qt5ct
