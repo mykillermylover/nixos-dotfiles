@@ -24,9 +24,6 @@
       # Xorg ENVS
       "XDG_SESSION_TYPE,wayland "
       "XDG_SCREENSHOTS_DIR,~/Pictures/Screenshots"
-
-      # GNOME SSH WRAPPER
-      "SSH_AUTH_SOCK,$XDG_RUNTIME_DIR/gcr/ssh"
     ];
   };
 }

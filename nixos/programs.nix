@@ -132,8 +132,16 @@
       xorg.xkeyboardconfig
       xz
       zlib
+      gnome-keyring
+      gcr
+      gcr_4
+      libsecret
     ];
 
     seahorse.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
   };
 }

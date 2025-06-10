@@ -22,5 +22,7 @@
       variant = "";
       options = "grp:win_space_toggle";
     };
+
+    gnome.gnome-keyring.enable = true;
   };
 }
