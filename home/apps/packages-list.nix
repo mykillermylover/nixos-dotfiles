@@ -59,7 +59,9 @@
     ])
     ++ (with inputs; [
       rose-pine-hyprcursor.packages.${pkgs.system}.default
-      mshell.packages.${pkgs.system}.default
+      # Wrapper let pass custom args to shell
+      # Like `mshell restart`
+      mshell.packages.${pkgs.system}.wrapper
     ])
     # Apps from private config repo
     ++ (with inputs.my-apps.packages.${pkgs.system}; [

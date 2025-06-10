@@ -147,11 +147,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1749473718,
-        "narHash": "sha256-Pcm3r1N4GhqEFsrpF15ZsOVocccYe6qVpSQKQUaZ3Qk=",
+        "lastModified": 1749576807,
+        "narHash": "sha256-nhFq40BW5k++b1aFhk2u9UZrtDlukuf2mQqkm3wBwQ4=",
         "owner": "mykillermylover",
         "repo": "ags-dotfiles",
-        "rev": "0a9212810d38f1d04fa44e013af176e109b9390c",
+        "rev": "50995421f66a69bbe7bbf4764a09a419636f89a4",
         "type": "github"
       },
       "original": {
