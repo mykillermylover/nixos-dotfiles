@@ -36,12 +36,17 @@
 
       hyprpolkitagent
       hyprpaper
+      hyprpicker
+      hyprshot
+      swappy
 
       fastfetch
       jq
       eza
       fzf
       bat
+      grc
+      fd
 
       dnsutils
       nmap

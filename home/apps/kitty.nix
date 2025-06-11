@@ -41,9 +41,9 @@
       cursor_shape = "beam";
       cursor_beam_thickness = 1.5;
       cursor_blink_interval = "0.33 cubic-bezier(.17,.67,.83,.67)";
-      cursor_trail = 75;
-      cursor_trail_decay = "0.05 0.25";
-      cursor_trail_start_threshold = 5;
+      cursor_trail = 150;
+      cursor_trail_decay = "0.5 0.7";
+      cursor_trail_start_threshold = 30;
     };
 
     keybindings = {
