@@ -48,6 +48,10 @@
       grc
       fd
 
+      cliphist
+      wl-clipboard
+      bemoji
+
       dnsutils
       nmap
 
@@ -67,6 +71,8 @@
       # Wrapper let pass custom args to shell
       # Like `mshell restart`
       mshell.packages.${pkgs.system}.wrapper
+
+      rofi-tools.packages.${pkgs.system}.rofi-cliphist
     ])
     # Apps from private config repo
     ++ (with inputs.my-apps.packages.${pkgs.system}; [

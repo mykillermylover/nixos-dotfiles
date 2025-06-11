@@ -29,9 +29,11 @@
     '';
 
     shellAliases = {
-      "nix-clear-garbage" = "nix-collect-garbage -d && sudo nix-collect-garbage -d $argv";
+      nix-clear-garbage = "nix-collect-garbage -d && sudo nix-collect-garbage -d $argv";
 
-      "ls" = "eza";
+      ls = "eza";
+
+      cat = "bat";
     };
 
     plugins = with pkgs.fishPlugins; [

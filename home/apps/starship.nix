@@ -4,8 +4,9 @@ let
     {
       symbol,
       bg ? "white",
-      fg ? "gray",
-      format ? "[ $symbol( $version) ]($style)",
+      fg ? "black",
+      format ? "[ $symbol $version ]($style)",
+      ...
     }:
     {
       inherit symbol;
@@ -28,20 +29,20 @@ in
       format = lib.concatStrings [
         "[╭─](bright-black)"
 
-        "[ ](bg:gray)"
+        "[ ](bg:black)"
         "$os"
-        "[](bg:gray fg:white)"
+        "[](bg:black fg:white)"
 
         "$username"
         "$directory"
 
         "("
-        "[](bg:gray fg:white)"
+        "[](bg:black fg:white)"
         "$git_branch"
         "$git_status"
         ")"
 
-        "[](fg:gray)"
+        "[](fg:black)"
 
         "$fill"
 
@@ -54,11 +55,11 @@ in
         "$vagrant"
         "$nix_shell"
 
-        "[](fg:gray)"
+        "[](fg:black)"
         "("
         "$cmd_duration"
         "$jobs"
-        "[](bg:gray fg:white)"
+        "[](bg:black fg:white)"
         ")"
 
         "$time"
@@ -81,7 +82,7 @@ in
 
       os = {
         disabled = false;
-        style = "bold bg:gray fg:white";
+        style = "bold bg:black fg:white";
 
         symbols = {
           Windows = "";
@@ -114,28 +115,32 @@ in
         format = "[ $user]($style)";
       };
 
-      directory = {
-        style = "bg:gray fg:cyan";
-        format = "[  $path ]($style)";
-        truncation_length = 2;
-        truncate_to_repo = false;
-        fish_style_pwd_dir_length = 3;
-      };
+      directory =
+        let
+          folderIcon = "[]($style blue)";
+        in
+        {
+          style = "bg:black fg:cyan";
+          format = "[ ${folderIcon} $path ]($style)";
+          truncation_length = 2;
+          truncate_to_repo = false;
+          fish_style_pwd_dir_length = 3;
+        };
 
       git_branch = {
         symbol = "";
-        style = "fg:bright-green bg:gray";
+        style = "fg:bright-green bg:black";
         format = "[ $symbol $branch ]($style)";
       };
 
       git_status = {
-        style = "fg:green bg:gray";
+        style = "fg:green bg:black";
         format = "[$all_status$ahead_behind]($style)";
       };
 
       nodejs = createLang {
         symbol = "";
-        bg = "bright-green";
+        bg = "green";
       };
 
       c = createLang {
@@ -148,29 +153,33 @@ in
         bg = "red";
       };
 
-      python = createLang {
+      python = createLang rec {
         symbol = "";
-        bg = "bright-cyan";
-        format = "[ $symbol( $version)(\\(#$virtualenv\\)) ]($style)";
+        bg = "cyan";
+
+        venvName = "[#$virtualenv](bold $style)";
+        format = "[ $symbol $version ${venvName} ]($style)";
       };
 
-      nix_shell = createLang {
+      nix_shell = createLang rec {
         symbol = "";
-        bg = "blue";
-        format = "[ $symbol $state \\($name\\) ]($style)";
+        bg = "bright-blue";
+
+        shellName = "[$name](bold $style)";
+        format = "[ $symbol $state ${shellName} ]($style)";
       };
 
       docker_context = createLang {
         symbol = "";
         bg = "purple";
-        format = "[ $symbol( $context) ]($style)";
+        format = "[ $symbol $context ]($style)";
       };
 
       time = {
         disabled = false;
         time_format = "%T";
-        style = "bg:gray";
-        format = "[[ $time ](fg:bright-cyan bg:gray)]($style)";
+        style = "bg:black";
+        format = "[[ $time ](fg:bright-cyan bg:black)]($style)";
       };
 
       line_break = {
@@ -190,16 +199,26 @@ in
       cmd_duration = {
         show_milliseconds = false;
         format = "[  $duration ]($style)";
-        style = "bg:gray fg:bright-yellow";
+        style = "bg:black fg:bright-yellow";
         disabled = false;
-        show_notifications = true;
-        min_time_to_notify = 10000;
+        show_notifications = false;
       };
 
       palettes = {
         powerlevel10k = {
           white = "#E9E9E9";
-          gray = "#303030";
+          bright-white = "#FFFFFF";
+
+          black = "#303030";
+          bright-black = "#5B5F62";
+
+          green = "#64D110";
+          bright-green = "#64D110";
+
+          yellow = "#82885C";
+
+          blue = "#0085B3";
+          bright-blue = "#10A5F2";
         };
       };
 

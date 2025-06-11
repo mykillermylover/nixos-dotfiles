@@ -23,6 +23,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    rofi-tools = {
+      url = "github:szaffarano/rofi-tools";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     # My ags shell
     mshell.url = "github:mykillermylover/ags-dotfiles";
 
