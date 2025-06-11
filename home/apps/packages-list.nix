@@ -40,6 +40,7 @@
       hyprshot
       swappy
 
+      zoxide
       fastfetch
       jq
       eza
