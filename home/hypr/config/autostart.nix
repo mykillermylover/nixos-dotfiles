@@ -5,7 +5,7 @@
     ### AUTOSTART ###
     #################
     exec-once = [
-      "waypaper --restore"
+      "hyprpaper"
       "nm-applet"
       "systemctl --user start hyprpolkitagent"
 

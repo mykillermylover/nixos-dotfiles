@@ -36,7 +36,6 @@
 
       hyprpolkitagent
       hyprpaper
-      waypaper
       hyprpicker
       hyprshot
       swappy

@@ -11,5 +11,6 @@
 
     ./hyprlock.nix
     ./hypridle.nix
+    ./hyprpaper.nix
   ];
 }
