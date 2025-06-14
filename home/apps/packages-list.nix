@@ -65,9 +65,9 @@
 
       nix-output-monitor
       nixfmt-rfc-style
+      nixd
 
       btop
-
       usbutils
     ])
     ++ (

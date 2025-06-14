@@ -10,10 +10,10 @@ let
     }:
     {
       inherit symbol;
-      style = "fg:${fg} bg:black";
+      style = "fg:${fg} bg:${bg}";
       format = lib.concatStrings [
         format
-        "[](fg:white bg:black)"
+        "[](fg:white bg:${bg})"
       ];
     };
 in
@@ -158,7 +158,7 @@ in
           stashed = "\$$count";
           staged = "+$count";
           renamed = "»$count";
-          deleted = "✘$count";
+          deleted = "[-$count](fg:red bg:black)";
           typechanged = "$count";
           modified = "!$count";
 
