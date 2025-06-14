@@ -8,6 +8,7 @@
     ./kitty.nix
     ./fish.nix
     ./starship.nix
+    ./firefox.nix
 
     ./packages-list.nix
     ./xdg-mimeapps.nix

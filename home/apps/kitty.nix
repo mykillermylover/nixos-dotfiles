@@ -44,10 +44,12 @@
       cursor_trail = 150;
       cursor_trail_decay = "0.5 0.7";
       cursor_trail_start_threshold = 30;
+
+      remote_control_password = "kitty_fish_notifications_password ls";
+      allow_remote_control = "password";
     };
 
     keybindings = {
-      "ctrl+alt+enter" = "launch --cwd=current";
       "ctrl+k" = "combine : clear_terminal active : send_text normal \\x0c";
     };
   };

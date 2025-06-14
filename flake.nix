@@ -25,9 +25,22 @@
 
     rofi-tools = {
       url = "github:szaffarano/rofi-tools";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    unimatrix = {
+      url = "github:will8211/unimatrix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    WaveFox = {
+      url = "github:QNetITQ/WaveFox?dir=chrome";
+      flake = false;
     };
 
     # My ags shell
@@ -44,6 +57,7 @@
     inputs@{
       nixpkgs,
       home-manager,
+      sops-nix,
       ...
     }:
     let
@@ -58,6 +72,7 @@
 
           modules = [
             ./nixos
+            sops-nix.nixosModules.sops
 
             home-manager.nixosModules.home-manager
             {

@@ -3,18 +3,17 @@ let
   createLang =
     {
       symbol,
-      bg ? "white",
-      fg ? "black",
+      bg ? "black",
+      fg ? "white",
       format ? "[ $symbol $version ]($style)",
       ...
     }:
     {
       inherit symbol;
-      style = "fg:${fg} bg:${bg}";
+      style = "fg:${fg} bg:black";
       format = lib.concatStrings [
-        "[](fg:${bg})"
         format
-        "[](fg:${bg})"
+        "[](fg:white bg:black)"
       ];
     };
 in
@@ -46,6 +45,13 @@ in
 
         "$fill"
 
+        "[](fg:black)"
+        "("
+        "$cmd_duration"
+        "$jobs"
+        "[](bg:black fg:white)"
+        ")"
+
         "$deno"
         "$nodejs"
         "$php"
@@ -54,13 +60,6 @@ in
         "$terraform"
         "$vagrant"
         "$nix_shell"
-
-        "[](fg:black)"
-        "("
-        "$cmd_duration"
-        "$jobs"
-        "[](bg:black fg:white)"
-        ")"
 
         "$time"
         "$status"
@@ -82,7 +81,7 @@ in
 
       os = {
         disabled = false;
-        style = "bold bg:black fg:white";
+        style = "bold bg:black fg:bright-white";
 
         symbols = {
           Windows = "";
@@ -133,29 +132,58 @@ in
         format = "[ $symbol $branch ]($style)";
       };
 
-      git_status = {
-        style = "fg:green bg:black";
-        format = "[$all_status$ahead_behind]($style)";
-      };
+      git_status =
+        let
+          ahead_behind = "($ahead_behind )";
+
+          all_status = lib.concatStrings (
+            map (str: "(${str} )") [
+              "$conflicted"
+              "$stashed"
+              "$deleted"
+              "$renamed"
+              "$modified"
+              "$typechanged"
+              "$staged"
+              "$untracked"
+            ]
+          );
+        in
+        {
+          ahead = "⇡$count";
+          diverged = "⇕⇡$ahead_count⇣$behind_count";
+          behind = "⇣$count";
+          conflicted = "$count";
+          untracked = "?$count";
+          stashed = "\$$count";
+          staged = "+$count";
+          renamed = "»$count";
+          deleted = "✘$count";
+          typechanged = "$count";
+          modified = "!$count";
+
+          style = "fg:green bg:black";
+          format = "[${all_status}${ahead_behind}]($style)";
+        };
 
       nodejs = createLang {
         symbol = "";
-        bg = "green";
+        fg = "green";
       };
 
       c = createLang {
         symbol = "";
-        bg = "bright-blue";
+        fg = "bright-blue";
       };
 
       rust = createLang {
         symbol = "";
-        bg = "red";
+        fg = "red";
       };
 
       python = createLang rec {
         symbol = "";
-        bg = "cyan";
+        fg = "cyan";
 
         venvName = "[#$virtualenv](bold $style)";
         format = "[ $symbol $version ${venvName} ]($style)";
@@ -163,7 +191,7 @@ in
 
       nix_shell = createLang rec {
         symbol = "";
-        bg = "bright-blue";
+        fg = "bright-blue";
 
         shellName = "[$name](bold $style)";
         format = "[ $symbol $state ${shellName} ]($style)";
@@ -171,7 +199,7 @@ in
 
       docker_context = createLang {
         symbol = "";
-        bg = "purple";
+        fg = "purple";
         format = "[ $symbol $context ]($style)";
       };
 
@@ -206,8 +234,8 @@ in
 
       palettes = {
         powerlevel10k = {
-          white = "#E9E9E9";
-          bright-white = "#FFFFFF";
+          white = "#7D7D7D";
+          bright-white = "#E9E9E9";
 
           black = "#303030";
           bright-black = "#5B5F62";

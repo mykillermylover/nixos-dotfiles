@@ -36,10 +36,13 @@
 
       hyprpolkitagent
       hyprpaper
+      waypaper
       hyprpicker
       hyprshot
       swappy
+      python3
 
+      bluetuith
       zoxide
       fastfetch
       jq
@@ -48,6 +51,7 @@
       bat
       grc
       fd
+      sops
 
       cliphist
       wl-clipboard
@@ -67,18 +71,36 @@
 
       usbutils
     ])
-    ++ (with inputs; [
-      rose-pine-hyprcursor.packages.${pkgs.system}.default
-      # Wrapper let pass custom args to shell
-      # Like `mshell restart`
-      mshell.packages.${pkgs.system}.wrapper
+    ++ (
+      with inputs;
+      let
+        default =
+          {
+            packages,
+            path ? "default",
+            ...
+          }:
+          packages.${pkgs.system}.${path};
 
-      rofi-tools.packages.${pkgs.system}.rofi-cliphist
-    ])
-    # Apps from private config repo
-    ++ (with inputs.my-apps.packages.${pkgs.system}; [
-      # AppImages
-      ktalk
-      squadus
-    ]);
+      in
+      map default [
+        # default rose-pine-hyprcursor
+        rose-pine-hyprcursor
+        unimatrix
+
+        # Wrapper let pass custom args to shell
+        # Like `mshell restart`
+        (mshell // { path = "wrapper"; })
+
+        (rofi-tools // { path = "rofi-cliphist"; })
+        (my-apps // { path = "ktalk"; })
+        (my-apps // { path = "squadus"; })
+      ]
+    );
+  # Apps from private config repo
+  # ++ (with inputs.my-apps.packages.${pkgs.system}; [
+  #   # AppImages
+  #   ktalk
+  #   squadus
+  # ]);
 }
