@@ -3,27 +3,25 @@
   home.packages =
     (with pkgs; [
       telegram-desktop
-      zip
-      unzip
-      p7zip
       rofi-wayland
       pavucontrol
-      chromium
       networkmanagerapplet
       openvpn
       kdePackages.ark
       fnm
       qbittorrent-enhanced
+      python3
       atlauncher
-
-      libsForQt5.qtstyleplugin-kvantum
-      libsForQt5.qt5ct
-      kdePackages.qt6ct
+      chromium
 
       # theme
       graphite-kde-theme
       graphite-gtk-theme
       rose-pine-cursor
+      libsForQt5.qtstyleplugin-kvantum
+      libsForQt5.qt5ct
+      kdePackages.qt6ct
+
       # icons
       colloid-icon-theme
       kdePackages.breeze-icons
@@ -35,13 +33,13 @@
       noto-fonts-color-emoji
       noto-fonts
 
+      # hypr
       hyprpolkitagent
       hyprpaper
       hyprpicker
       hyprshot
-      swappy
-      python3
 
+      # utils
       bluetuith
       zoxide
       fastfetch
@@ -52,24 +50,25 @@
       grc
       fd
       sops
-
-      cliphist
-      wl-clipboard
       bemoji
-
+      usbutils
       dnsutils
       nmap
-
       file
       which
       gnupg
-
+      swappy
+      zip
+      unzip
+      p7zip
+      # nix utils
       nix-output-monitor
       nixfmt-rfc-style
       nixd
 
-      btop
-      usbutils
+      # clipboard
+      cliphist
+      wl-clipboard
     ])
     ++ (
       with inputs;
@@ -77,10 +76,10 @@
         default =
           {
             packages,
-            path ? "default",
+            name ? "default",
             ...
           }:
-          packages.${pkgs.system}.${path};
+          packages.${pkgs.system}.${name};
 
       in
       map default [
@@ -90,17 +89,11 @@
 
         # Wrapper let pass custom args to shell
         # Like `mshell restart`
-        (mshell // { path = "wrapper"; })
+        (mshell // { name = "wrapper"; })
 
-        (rofi-tools // { path = "rofi-cliphist"; })
-        (my-apps // { path = "ktalk"; })
-        (my-apps // { path = "squadus"; })
+        (rofi-tools // { name = "rofi-cliphist"; })
+        (my-apps // { name = "ktalk"; })
+        (my-apps // { name = "squadus"; })
       ]
     );
-  # Apps from private config repo
-  # ++ (with inputs.my-apps.packages.${pkgs.system}; [
-  #   # AppImages
-  #   ktalk
-  #   squadus
-  # ]);
 }
