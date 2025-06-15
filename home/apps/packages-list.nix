@@ -14,6 +14,7 @@
       kdePackages.ark
       fnm
       qbittorrent-enhanced
+      atlauncher
 
       libsForQt5.qtstyleplugin-kvantum
       libsForQt5.qt5ct
