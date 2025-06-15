@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   imports = [
     # auto-generated
@@ -8,6 +8,7 @@
     ./hardware.nix
     ./networking.nix
     ./nix.nix
+    ./users.nix
     ./time-locale.nix
 
     ./apps
@@ -15,18 +16,6 @@
     ./nixpkgs
     ./services
   ];
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.mihail = {
-    isNormalUser = true;
-    description = "Mihail";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-    packages = with pkgs; [ ];
-    shell = pkgs.fish;
-  };
 
   security.pam.services = {
     sddm.enableGnomeKeyring = true;
