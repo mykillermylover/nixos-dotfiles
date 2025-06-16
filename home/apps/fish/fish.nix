@@ -53,6 +53,14 @@
         description = "Clear NixOS and Home Manager Garbage";
       };
 
+      nom-wrap = {
+        body = ''
+          bash -c "$argv --log-format internal-json -v |& nom --json"
+        '';
+        wraps = "Any nix function";
+        description = "Wrap Nix functions with nom";
+      };
+
       gitignore = "curl -sL https://www.gitignore.io/api/$argv";
     };
 
