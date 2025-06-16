@@ -46,6 +46,11 @@
       flake = false;
     };
 
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # My ags shell
     mshell.url = "github:mykillermylover/ags-dotfiles";
 

@@ -50,7 +50,7 @@
         '';
         wraps = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
 
-        description = "Clear NixOS and Home Manager Garbage ";
+        description = "Clear NixOS and Home Manager Garbage";
       };
 
       gitignore = "curl -sL https://www.gitignore.io/api/$argv";
