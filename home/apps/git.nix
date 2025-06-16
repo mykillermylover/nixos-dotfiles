@@ -9,5 +9,9 @@
       format = "openpgp";
       signByDefault = true;
     };
+
+    extraConfig = { 
+      init.defaultBranch = "main";
+    };
   };
 }

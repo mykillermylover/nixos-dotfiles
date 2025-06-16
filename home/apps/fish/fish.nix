@@ -34,11 +34,26 @@
     '';
 
     shellAliases = {
-      nix-clear-garbage = "nix-collect-garbage -d && sudo nix-collect-garbage -d $argv";
+      rmrf = "rm -rf";
 
       ls = "eza";
 
       cat = "bat";
+
+      nixup = "sudo bash -c 'nixos-rebuild switch --log-format internal-json -v |& nom --json'";
+    };
+
+    functions = {
+      nix-clear-garbage = {
+        body = ''
+          sudo nix-collect-garbage $argv -d && nix-collect-garbage $argv -d
+        '';
+        wraps = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
+
+        description = "Clear NixOS and Home Manager Garbage ";
+      };
+
+      gitignore = "curl -sL https://www.gitignore.io/api/$argv";
     };
 
     plugins = with pkgs.fishPlugins; [
