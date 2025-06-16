@@ -1,5 +1,5 @@
 {
-  description = "First NixOS Flake";
+  description = "NixOS and Home Manager config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
