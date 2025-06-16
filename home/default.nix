@@ -1,9 +1,6 @@
-{ inputs, ... }:
+{ ... }:
 {
   imports = [
-    inputs.spicetify-nix.homeManagerModules.default
-
-    inputs.sops-nix.homeManagerModules.sops
     ./sops.nix
     ./systemd.nix
 

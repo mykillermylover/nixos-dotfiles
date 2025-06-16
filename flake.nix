@@ -11,7 +11,10 @@
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     rose-pine-hyprcursor = {
       url = "github:ndom91/rose-pine-hyprcursor";
