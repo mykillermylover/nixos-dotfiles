@@ -2,7 +2,7 @@
 {
   imports = [
     ./git.nix
-    ./vscode.nix
+    ./vscode
     ./spicetify.nix
     ./kitty.nix
     ./firefox.nix
