@@ -15,8 +15,9 @@
       fnm
       qbittorrent-enhanced
       python3
-      atlauncher
       chromium
+      prismlauncher
+      google-chrome
 
       # theme
       graphite-kde-theme

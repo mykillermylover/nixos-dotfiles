@@ -51,6 +51,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
+
     # My ags shell
     mshell.url = "github:mykillermylover/ags-dotfiles";
 

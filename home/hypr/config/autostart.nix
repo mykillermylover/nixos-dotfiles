@@ -21,6 +21,8 @@
 
       # set hdmi as primary display
       # "xrandr --output HDMI-A-1 --primary"
+
+      "gnome-keyring-daemon --start --components=secrets"
     ];
   };
 }

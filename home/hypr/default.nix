@@ -7,7 +7,8 @@
   };
 
   imports = [
-    ./config    
+    ./config
+    ./plugins
 
     ./hyprlock.nix
     ./hypridle.nix
