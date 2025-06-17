@@ -116,9 +116,6 @@
       xorg.xkeyboardconfig
       xz
       zlib
-      gnome-keyring
-      gcr
-      gcr_4
       libsecret
     ];
   };

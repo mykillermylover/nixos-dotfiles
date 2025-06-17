@@ -18,7 +18,8 @@
       chromium
       prismlauncher
       google-chrome
-
+      jetbrains-toolbox
+      
       # theme
       graphite-kde-theme
       graphite-gtk-theme

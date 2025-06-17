@@ -25,5 +25,14 @@
       name = "done";
       inherit (done) src;
     }
+    {
+      name = "replay";
+      src = pkgs.fetchFromGitHub {
+        owner = "jorgebucaran";
+        repo = "replay.fish";
+        rev = "main";
+        sha256 = "sha256-TzQ97h9tBRUg+A7DSKeTBWLQuThicbu19DHMwkmUXdg=";
+      };
+    }
   ];
 }
