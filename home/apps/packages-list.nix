@@ -67,6 +67,8 @@
       zip
       unzip
       p7zip
+      killall
+
       # nix utils
       nix-output-monitor
       nixfmt-rfc-style
