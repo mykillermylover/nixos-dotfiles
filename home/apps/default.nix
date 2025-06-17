@@ -8,6 +8,8 @@
     ./firefox.nix
     ./btop.nix
     ./neovim.nix
+    ./starship.nix
+    ./zoxide.nix
 
     ./packages-list.nix
     ./xdg-mimeapps.nix

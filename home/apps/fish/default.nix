@@ -1,8 +1,8 @@
 { ... }:
 {
   imports = [
-    ./fish.nix
-    ./starship.nix
-    ./zoxide.nix
+    ./main.nix
+    ./functions.nix
+    ./plugins.nix
   ];
 }
