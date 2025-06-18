@@ -22,11 +22,17 @@ in
       prismlauncher
       google-chrome
       jetbrains-toolbox
-      
+
       # Apps from local repo
       ktalk
       squadus
+      # in nixpkgs old version
       lens
+
+      # My ags shell
+      # Wrapper let pass custom args to shell
+      # Like `mshell restart`
+      mshell-wrapped
 
       # theme
       graphite-kde-theme
@@ -102,10 +108,6 @@ in
         # default rose-pine-hyprcursor
         rose-pine-hyprcursor
         unimatrix
-
-        # Wrapper let pass custom args to shell
-        # Like `mshell restart`
-        (mshell // { name = "wrapper"; })
 
         (rofi-tools // { name = "rofi-cliphist"; })
       ]

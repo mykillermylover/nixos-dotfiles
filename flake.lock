@@ -679,11 +679,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1750233729,
-        "narHash": "sha256-JpYU3NGIOZUrmxfMaiIfP68Ai1yWZayWOSfakbD4XdM=",
+        "lastModified": 1750255190,
+        "narHash": "sha256-f8plgbxe4PVYM7LjzWzxkpkUcZ5vEA3tB0kBMU1Ijzk=",
         "owner": "mykillermylover",
         "repo": "ags-dotfiles",
-        "rev": "aaab45c41eafce5271c150b652935c37aaf70a59",
+        "rev": "a932639c4f458c51c94cacd602bb81a9ff3a8e2c",
         "type": "github"
       },
       "original": {
@@ -699,8 +699,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1750247077,
-        "narHash": "sha256-xqUHZIxTfs1xKcs71TPDGftu/wy7Fykvnxu/4At84wI=",
+        "lastModified": 1750254770,
+        "narHash": "sha256-wVGkvQOc9kdQNCEFgbLbWuILYSwT4nCk4D5sJgfNHe0=",
         "path": "/home/mihail/Apps/nix-apps",
         "type": "path"
       },
