@@ -12,6 +12,7 @@
           sumneko.lua
           eamodio.gitlens
           christian-kohler.path-intellisense
+          ruschaaf.extended-embedded-languages
 
           pkief.material-icon-theme
           monokai.theme-monokai-pro-vscode

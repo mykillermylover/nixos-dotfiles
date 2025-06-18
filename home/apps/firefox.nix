@@ -39,7 +39,7 @@
   # Apply WaveFox with additional css
   home.file.".mozilla/firefox/default/chrome" =
     let
-      extraCss = ''
+      extraCss = /*css*/ ''
         .tabbrowser-tab:hover {
           .tab-background:not([selected], [multiselected]) {
               background-image: none !important;
