@@ -1,5 +1,6 @@
 {
   "git.confirmSync" = false;
+  "git.autofetch" = true;
   "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'MesloLGS Nerd Font', monospace";
   "editor.fontLigatures" = true;
   "terminal.integrated.fontFamily" = "'MesloLGS Nerd Font', monospace";

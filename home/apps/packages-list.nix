@@ -3,6 +3,9 @@
   inputs,
   ...
 }:
+let
+  # prismlauncher = pkgs.prismlauncher.override { glfw3-minecraft = pkgs.; };
+in
 {
   home.packages =
     (with pkgs; [
@@ -20,6 +23,11 @@
       google-chrome
       jetbrains-toolbox
       
+      # Apps from local repo
+      ktalk
+      squadus
+      lens
+
       # theme
       graphite-kde-theme
       graphite-gtk-theme
@@ -100,8 +108,6 @@
         (mshell // { name = "wrapper"; })
 
         (rofi-tools // { name = "rofi-cliphist"; })
-        (my-apps // { name = "ktalk"; })
-        (my-apps // { name = "squadus"; })
       ]
     );
 }

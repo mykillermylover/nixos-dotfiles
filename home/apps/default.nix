@@ -10,6 +10,7 @@
     ./neovim.nix
     ./starship.nix
     ./zoxide.nix
+    ./direnv.nix
 
     ./packages-list.nix
     ./xdg-mimeapps.nix
