@@ -10,6 +10,7 @@
     ./nix.nix
     ./users.nix
     ./time-locale.nix
+    ./virtualization.nix
 
     ./apps
     ./environment

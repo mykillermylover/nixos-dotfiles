@@ -1,12 +1,7 @@
-{ inputs, ... }:
+{ ... }:
 {
+  imports = [ ./overlays.nix ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  nixpkgs.overlays = with inputs; [
-    nix-vscode-extensions.overlays.default
-    nix-your-shell.overlays.default
-    my-apps.overlays.default
-    mshell.overlays.default
-  ];
 }
