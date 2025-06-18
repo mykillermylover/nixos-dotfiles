@@ -10,7 +10,6 @@ in
   home.packages =
     (with pkgs; [
       telegram-desktop
-      rofi-wayland
       pavucontrol
       networkmanagerapplet
       openvpn

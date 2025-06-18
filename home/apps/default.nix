@@ -16,5 +16,6 @@
     ./xdg-mimeapps.nix
 
     ./fish
+    ./rofi
   ];
 }
