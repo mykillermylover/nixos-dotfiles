@@ -3,9 +3,6 @@
   inputs,
   ...
 }:
-let
-  # prismlauncher = pkgs.prismlauncher.override { glfw3-minecraft = pkgs.; };
-in
 {
   home.packages =
     (with pkgs; [
@@ -21,6 +18,7 @@ in
       prismlauncher
       google-chrome
       jetbrains-toolbox
+      onlyoffice-desktopeditors
 
       # Apps from local repo
       ktalk
@@ -51,6 +49,8 @@ in
       nerd-fonts.meslo-lg
       noto-fonts-color-emoji
       noto-fonts
+      corefonts
+      vistafonts
 
       # hypr
       hyprpolkitagent
@@ -80,6 +80,7 @@ in
       zip
       unzip
       p7zip
+      rar
       killall
 
       # nix utils

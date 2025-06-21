@@ -72,13 +72,15 @@
     }:
     let
       system = "x86_64-linux";
+
+      globals = import ./globals;
     in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           inherit system;
 
-          specialArgs = { inherit inputs; };
+          specialArgs = { inherit inputs globals; };
 
           modules = [
             ./nixos
@@ -93,7 +95,7 @@
 
                 backupFileExtension = "bak";
 
-                extraSpecialArgs = { inherit inputs; };
+                extraSpecialArgs = { inherit inputs globals; };
               };
             }
           ];

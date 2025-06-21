@@ -1,4 +1,4 @@
-{ ... }:
+{ globals, ... }:
 {
   wayland.windowManager.hyprland.settings = {
     #################
@@ -19,8 +19,8 @@
       # clipboard manager
       "wl-paste --watch cliphist store"
 
-      # set hdmi as primary display
-      # "xrandr --output HDMI-A-1 --primary"
+      # set external monitor as primary display
+      "xrandr --output ${globals.const.externalMon} --primary"
 
       "gnome-keyring-daemon --start --components=secrets"
     ];

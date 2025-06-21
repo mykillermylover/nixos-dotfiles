@@ -1,8 +1,8 @@
-{ ... }:
+{ globals, ... }:
 {
   wayland.windowManager.hyprland.settings.plugin = {
     xwaylandprimary = {
-      display = "HDMI-A-1";
+      display = globals.const.externalMon;
     };
   };
 }

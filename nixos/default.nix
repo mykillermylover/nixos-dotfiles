@@ -11,6 +11,7 @@
     ./users.nix
     ./time-locale.nix
     ./virtualization.nix
+    ./xorg.nix
 
     ./apps
     ./environment

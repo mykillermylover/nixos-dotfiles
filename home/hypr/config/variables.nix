@@ -1,6 +1,6 @@
-{ ... }:
+{ globals, ... }:
 {
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland.settings = with globals.const; {
     #################
     ### VARIABLES ###
     #################
@@ -11,8 +11,8 @@
     "$ctrlMod" = "SUPER_CTRL";
 
     ## Monitors
-    "$builtInMon" = "eDP-1";
-    "$externalMon" = "HDMI-A-1";
+    "$builtInMon" = builtInMon;
+    "$externalMon" = externalMon;
 
     ## Programs
     "$terminal" = "kitty";

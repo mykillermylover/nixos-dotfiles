@@ -1,4 +1,4 @@
-{ ... }:
+{ globals, ... }:
 {
   services.hyprpaper = {
     enable = true;
@@ -9,9 +9,9 @@
       ipc = true;
       preload = [wallpaper];
 
-      wallpaper = [
-        "HDMI-A-1, ${wallpaper}"
-        "eDP-1, ${wallpaper}"
+      wallpaper = with globals.const; [
+        "${externalMon}, ${wallpaper}"
+        "${builtInMon}, ${wallpaper}"
       ];
     };
   };
