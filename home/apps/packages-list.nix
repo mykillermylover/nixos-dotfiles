@@ -19,6 +19,8 @@
       google-chrome
       jetbrains-toolbox
       onlyoffice-desktopeditors
+      
+      arduino-ide
 
       # Apps from local repo
       ktalk

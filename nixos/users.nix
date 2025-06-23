@@ -8,6 +8,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      "dialout" # For arduino
     ];
     packages = with pkgs; [ ];
     shell = pkgs.fish;
