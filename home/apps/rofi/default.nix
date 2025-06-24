@@ -34,6 +34,7 @@
         in
         {
           show-icons = true;
+          steal-focus = true;
           icon-theme = "Colloid-Dark";
 
           matching = "normal";
@@ -42,7 +43,13 @@
           ############
           ### DRUN ###
           ############
-          drun-match-fields = "name,generic,categories,keywords,comment";
+          drun-match-fields = [
+            "name"
+            "generic"
+            "categories"
+            "keywords"
+            "comment"
+          ];
           drun-show-actions = false;
           case-sensitive = false;
           case-smart = true;
