@@ -13,6 +13,8 @@
           eamodio.gitlens
           christian-kohler.path-intellisense
           ruschaaf.extended-embedded-languages
+          arrterian.nix-env-selector
+          mkhl.direnv
 
           pkief.material-icon-theme
           monokai.theme-monokai-pro-vscode

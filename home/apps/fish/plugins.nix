@@ -14,8 +14,8 @@
       inherit (grc) src;
     }
     {
-      name = "git-abbr";
-      inherit (git-abbr) src;
+      name = "plugin-git";
+      inherit (plugin-git) src;
     }
     {
       name = "fzf-fish";

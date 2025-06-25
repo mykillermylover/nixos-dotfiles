@@ -190,6 +190,7 @@ in
       };
 
       nix_shell = createLang rec {
+        heuristic = true;
         symbol = "";
         fg = "bright-blue";
 
