@@ -74,8 +74,12 @@
       libxcrypt-legacy
       libxkbcommon
       libxml2
-      mesa
+      libglibutil
+      libnss_nis
+      libgbm
+      gio-sharp
       nspr
+      mesa
       nss
       openssl
       p11-kit
