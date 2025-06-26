@@ -4,6 +4,7 @@
   "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'MesloLGS Nerd Font', monospace";
   "editor.fontLigatures" = true;
   "terminal.integrated.fontFamily" = "'MesloLGS Nerd Font', monospace";
+  "terminal.explorerKind" = "both";
   "git.allowForcePush" = true;
   "projectManager.cacheProjectsBetweenSessions" = false;
   "projectManager.sortList" = "Name";

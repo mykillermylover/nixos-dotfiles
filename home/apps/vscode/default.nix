@@ -15,6 +15,7 @@
           ruschaaf.extended-embedded-languages
           arrterian.nix-env-selector
           mkhl.direnv
+          mads-hartmann.bash-ide-vscode
 
           pkief.material-icon-theme
           monokai.theme-monokai-pro-vscode
