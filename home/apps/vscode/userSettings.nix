@@ -1,11 +1,16 @@
 {
+  # git
   "git.confirmSync" = false;
   "git.autofetch" = true;
+  "git.enableCommitSigning" = true;
+  "git.allowForcePush" = true;
+
   "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'MesloLGS Nerd Font', monospace";
   "editor.fontLigatures" = true;
+  "editor.tabSize" = 2;
+
   "terminal.integrated.fontFamily" = "'MesloLGS Nerd Font', monospace";
   "terminal.explorerKind" = "both";
-  "git.allowForcePush" = true;
   "projectManager.cacheProjectsBetweenSessions" = false;
   "projectManager.sortList" = "Name";
   "security.workspace.trust.untrustedFiles" = "open";
@@ -34,9 +39,9 @@
       };
     };
   };
-  "editor.tabSize" = 2;
   "workbench.iconTheme" = "material-icon-theme";
   "workbench.colorTheme" = "Monokai Pro (Filter Spectrum)";
+
   # Disable italic font
   "editor.tokenColorCustomizations" = {
     "textMateRules" = [

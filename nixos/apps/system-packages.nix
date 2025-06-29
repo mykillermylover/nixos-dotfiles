@@ -18,5 +18,8 @@
     adwaita-icon-theme
     adwaita-icon-theme-legacy
     adwaita-fonts
+
+    alsa-tools
+    alsa-utils
   ];
 }

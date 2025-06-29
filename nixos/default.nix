@@ -11,18 +11,15 @@
     ./users.nix
     ./time-locale.nix
     ./virtualization.nix
+    ./security.nix
     ./xorg.nix
 
     ./apps
     ./environment
     ./nixpkgs
     ./services
+    ./systemd
   ];
-
-  security.pam.services = {
-    sddm.enableGnomeKeyring = true;
-    login.enableGnomeKeyring = true;
-  };
 
   swapDevices = [{
     device = "/var/lib/swapfile";
