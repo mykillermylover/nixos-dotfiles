@@ -43,7 +43,7 @@
       cursor_blink_interval = "0.33 cubic-bezier(.17,.67,.83,.67)";
       cursor_trail = 150;
       cursor_trail_decay = "0.5 0.7";
-      cursor_trail_start_threshold = 30;
+      cursor_trail_start_threshold = 5;
 
       remote_control_password = "kitty_fish_notifications_password ls";
       allow_remote_control = "password";

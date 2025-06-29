@@ -20,7 +20,7 @@
 
     nixup = {
       body = ''
-        sudo bash -c "nixos-rebuild switch $argv --log-format internal-json -v |& nom --json"
+        sudo bash -c "cd $HOME && nixos-rebuild switch $argv --log-format internal-json -v |& nom --json"
       '';
       wraps = "nixos-rebuild switch";
       description = "Wrap Nix rebuild function with monitor";
