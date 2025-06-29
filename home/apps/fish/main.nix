@@ -12,6 +12,8 @@
       end
 
       fnm env --use-on-cd --version-file-strategy=recursive --resolve-engines --shell fish | source
+
+      ${import ./theme.nix}
     '';
 
     shellInitLast = ''
