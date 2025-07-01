@@ -35,6 +35,7 @@
       "center, title:^(Save As)(.*)$"
       "center, title:^(Library)(.*)$"
       "center, title:^(File Upload)(.*)$"
+      "center, title:^(File Operation Progress)(.*)$"
       "center, title:^(Rename)(.*)$"
       "center, class:^(xdg-desktop-portal-gtk)$"
       
@@ -45,6 +46,7 @@
       "float,  title:^(Save As)(.*)$"
       "float,  title:^(Library)(.*)$"
       "float,  title:^(File Upload)(.*)$"
+      "float,  title:^(File Operation Progress)(.*)$"
       "float, title:^(Rename)(.*)$"
       "float,  class:^(xdg-desktop-portal-gtk)$"
       #

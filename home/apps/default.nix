@@ -5,7 +5,6 @@
     ./vscode
     ./spicetify.nix
     ./kitty.nix
-    ./firefox.nix
     ./btop.nix
     ./neovim.nix
     ./starship.nix
@@ -16,6 +15,7 @@
     ./xdg-mimeapps.nix
 
     ./fish
+    ./firefox
     ./rofi
   ];
 }

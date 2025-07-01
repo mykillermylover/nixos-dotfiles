@@ -2,11 +2,14 @@
 {
   # Bootloader.
   boot = {
-    loader.systemd-boot = {
-      enable = true;
-      configurationLimit = 10;
+    loader = {
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 10;
+      };
+      
+      efi.canTouchEfiVariables = true;
     };
-    loader.efi.canTouchEfiVariables = true;
 
     # Use latest kernel.
     kernelPackages = pkgs.linuxPackages_latest;
