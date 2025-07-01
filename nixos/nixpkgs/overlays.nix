@@ -5,5 +5,6 @@
     nix-your-shell.overlays.default
     my-apps.overlays.default
     mshell.overlays.default
+    glfw-minecraft-wayland.overlays.default
   ];
 }

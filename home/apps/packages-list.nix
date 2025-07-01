@@ -15,9 +15,9 @@
       qbittorrent-enhanced
       python3
       chromium
-      prismlauncher
+      (prismlauncher.override { glfw3-minecraft = glfw-minecraft-wayland; })
       google-chrome
-      jetbrains-toolbox
+      # jetbrains-toolbox
       onlyoffice-desktopeditors
 
       arduino-ide

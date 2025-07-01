@@ -56,6 +56,9 @@
     # My ags shell
     mshell.url = "github:mykillermylover/ags-dotfiles";
 
+    # glfw for minecraft with patches
+    glfw-minecraft-wayland.url = "github:mykillermylover/glfw-minecraft-wayland";
+
     # Private local repo
     my-apps = {
       url = "path:/home/mihail/Apps/nix-apps";
