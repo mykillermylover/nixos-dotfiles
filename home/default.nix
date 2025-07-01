@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./fonts.nix
     ./sops.nix
     ./systemd.nix
 

@@ -24,7 +24,7 @@
 
       # Apps from local repo
       ktalk
-      squadus
+      # squadus
       # in nixpkgs old version
       lens
 
@@ -44,15 +44,6 @@
       # icons
       colloid-icon-theme
       kdePackages.breeze-icons
-
-      # fonts
-      meslo-lgs-nf
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.meslo-lg
-      noto-fonts-color-emoji
-      noto-fonts
-      corefonts
-      vistafonts
 
       # hypr
       hyprpolkitagent
