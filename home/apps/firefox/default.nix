@@ -43,7 +43,12 @@
           "widget.wayland_vsync.enabled" = true;
         };
     };
+
+    # Firefox PWA support
+    nativeMessagingHosts = [ pkgs.firefoxpwa ];
   };
+  # Firefox PWA support
+  home.packages = [ pkgs.firefoxpwa ];
 
   # Apply WaveFox with additional css
   home.file.".mozilla/firefox/default/chrome" =
