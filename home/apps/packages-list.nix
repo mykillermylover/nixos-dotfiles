@@ -17,14 +17,13 @@
       chromium
       (prismlauncher.override { glfw3-minecraft = glfw-minecraft-wayland; })
       google-chrome
-      # jetbrains-toolbox
       onlyoffice-desktopeditors
 
       arduino-ide
 
       # Apps from local repo
       ktalk
-      # squadus
+      squadus
       # in nixpkgs old version
       lens
 
@@ -75,6 +74,7 @@
       p7zip
       rar
       killall
+      desktop-file-utils
 
       # nix utils
       nix-output-monitor

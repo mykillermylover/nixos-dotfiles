@@ -59,9 +59,9 @@
     # glfw for minecraft with patches
     glfw-minecraft-wayland.url = "github:mykillermylover/glfw-minecraft-wayland";
 
-    # Private local repo
+    # Private repo
     my-apps = {
-      url = "path:/home/mihail/Apps/nix-apps";
+      url = "git+ssh://git@github.com/mykillermylover/private-nix-apps.git?ref=main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

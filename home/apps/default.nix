@@ -8,6 +8,7 @@
     ./btop.nix
     ./neovim.nix
     ./starship.nix
+    ./jetbrains-toolbox.nix
     ./zoxide.nix
     ./direnv.nix
 
