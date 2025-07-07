@@ -8,7 +8,6 @@
 
   imports = [
     ./config
-    ./plugins
 
     ./hyprlock.nix
     ./hypridle.nix
