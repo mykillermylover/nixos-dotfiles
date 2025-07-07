@@ -5,7 +5,7 @@
       body = ''
         sudo nix-collect-garbage $argv -d && nix-collect-garbage $argv -d
       '';
-      wraps = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
+      wraps = "nix-collect-garbage";
 
       description = "Clear NixOS and Home Manager Garbage";
     };

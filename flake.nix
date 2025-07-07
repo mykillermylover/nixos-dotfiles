@@ -57,7 +57,10 @@
     mshell.url = "github:mykillermylover/ags-dotfiles";
 
     # glfw for minecraft with patches
-    glfw-minecraft-wayland.url = "github:mykillermylover/glfw-minecraft-wayland";
+    glfw-minecraft-wayland = {
+      url = "github:mykillermylover/glfw-minecraft-wayland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Private repo
     my-apps = {

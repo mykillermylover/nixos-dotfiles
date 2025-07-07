@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   networking = {
     hostName = "nixos"; # Define your hostname.
@@ -8,7 +8,20 @@
     # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     # Enable networking
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      plugins = with pkgs; [
+        networkmanager-fortisslvpn
+        networkmanager-iodine
+        networkmanager-l2tp
+        networkmanager-openconnect
+        networkmanager-openvpn
+        networkmanager-sstp
+        networkmanager-strongswan
+        networkmanager-vpnc
+      ];
+    };
+
     nftables.enable = true;
     iproute2.enable = true;
 
