@@ -12,5 +12,7 @@
       enable = true;
       enableSSHSupport = true;
     };
+
+    steam.enable = true;
   };
 }

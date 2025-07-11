@@ -15,6 +15,13 @@
 
     graphics.enable = true;
 
+    intel-gpu-tools.enable = true;
+
+    amdgpu.amdvlk = {
+      enable = true;
+      support32Bit.enable = true;
+    };
+
     firmware = with pkgs; [
       sof-firmware
       alsa-firmware

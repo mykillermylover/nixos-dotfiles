@@ -7,7 +7,7 @@
   home.packages =
     (with pkgs; [
       telegram-desktop
-      pavucontrol
+      pwvucontrol
       networkmanagerapplet
       openvpn
       kdePackages.ark
@@ -18,7 +18,6 @@
       (prismlauncher.override { glfw3-minecraft = glfw-minecraft-wayland; })
       google-chrome
       onlyoffice-desktopeditors
-
       arduino-ide
 
       # Apps from local repo

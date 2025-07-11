@@ -8,6 +8,7 @@
     ./apps
     ./hypr
     ./themes
+    ./services
   ];
 
   home.username = "mihail";
@@ -18,6 +19,4 @@
   };
 
   home.stateVersion = "25.05";
-
-  services.network-manager-applet.enable = true;
 }
