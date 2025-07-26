@@ -3,6 +3,12 @@
   inputs,
   ...
 }:
+let
+  prismlauncher = pkgs.prismlauncher.override {
+    glfw3-minecraft = pkgs.glfw-minecraft-wayland;
+    jdk8 = pkgs.jdk17;
+  };
+in
 {
   home.packages =
     (with pkgs; [
@@ -15,7 +21,7 @@
       qbittorrent-enhanced
       python3
       chromium
-      (prismlauncher.override { glfw3-minecraft = glfw-minecraft-wayland; })
+      prismlauncher
       google-chrome
       onlyoffice-desktopeditors
       arduino-ide

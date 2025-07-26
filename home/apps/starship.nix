@@ -128,7 +128,7 @@ in
 
       git_branch = {
         symbol = "";
-        style = "fg:bright-green bg:black";
+        style = "fg:green bg:black";
         format = "[ $symbol $branch ]($style)";
       };
 
@@ -189,6 +189,11 @@ in
         format = "[ $symbol $version ${venvName} ]($style)";
       };
 
+      deno = createLang {
+        symbol = "";
+        fg = "bright-green";
+      };
+
       nix_shell = createLang rec {
         heuristic = true;
         symbol = "";
@@ -242,7 +247,7 @@ in
           bright-black = "#5B5F62";
 
           green = "#64D110";
-          bright-green = "#64D110";
+          bright-green = "#7ED684";
 
           yellow = "#82885C";
 

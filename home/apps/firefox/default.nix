@@ -25,7 +25,7 @@
           "browser.tabs.inTitlebar" = 1;
           "WaveFox.Toolbar.Transparency" = 4;
           "svg.context-properties.content.enabled" = true;
-          "WaveFox.Icons" = 1;
+          "WaveFox.Icons" = 2;
           "userChrome.icon.panel_full" = true;
           "userChrome.icon.library" = true;
           "userChrome.icon.panel" = true;
