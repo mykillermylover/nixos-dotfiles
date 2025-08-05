@@ -80,6 +80,7 @@ in
       rar
       killall
       desktop-file-utils
+      tldr
 
       # nix utils
       nix-output-monitor

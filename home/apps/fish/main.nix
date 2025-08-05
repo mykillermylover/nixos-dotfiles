@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.fish = {
     enable = true;
@@ -16,7 +16,11 @@
       ${import ./theme.nix}
     '';
 
-    shellInitLast = ''
+    shellInitLast = 
+      let
+        fish_completions = pkgs.callPackage (import ./completions.nix) {};
+      in
+      ''
       # Init nix-your-shell
       nix-your-shell fish | source
 
@@ -26,6 +30,9 @@
       # Fish + Done plugin integration
       set -U __done_kitty_remote_control 1
       set -U __done_kitty_remote_control_password kitty_fish_notifications_password
+      
+      # Custom completions
+      ${fish_completions}
     '';
 
     interactiveShellInit = ''
@@ -38,6 +45,8 @@
       ls = "eza";
 
       cat = "bat";
+
+      ff = "fastfetch";
     };
   };
 }
