@@ -31,9 +31,6 @@
       set -U __done_kitty_remote_control 1
       set -U __done_kitty_remote_control_password kitty_fish_notifications_password
       
-      # Add deno version manager bin to PATH
-      fish_add_path $HOME/.dvm/bin
-      
       # Custom completions
       ${fish_completions}
     '';

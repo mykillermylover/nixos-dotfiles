@@ -35,6 +35,18 @@
       description = "Prefetch nix deps and convert to SRI hash";
     };
 
+    fish_remove_path = {
+      body = ''
+        function remove_path
+          if set -l index (contains -i "$argv" $fish_user_paths)
+            set -e fish_user_paths[$index]
+            echo "Removed $argv from the path"
+          end
+        end
+      '';
+      description = "Remove entry from fish_user_paths";
+    };
+
     gitignore = "curl -sL https://www.gitignore.io/api/$argv";
   };
 }

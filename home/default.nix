@@ -11,12 +11,21 @@
     ./services
   ];
 
-  home.username = "mihail";
-  home.homeDirectory = "/home/mihail";
+  home = rec {
+    username = "mihail";
+    homeDirectory = "/home/${username}";
+
+    stateVersion = "25.05";
+
+    sessionPath = [
+      "${homeDirectory}/.local/bin"
+
+      # Deno version manager
+      "${homeDirectory}/.dvm/bin"
+    ];
+  };
 
   xresources.properties = {
     "Xcursor.size" = 24;
   };
-
-  home.stateVersion = "25.05";
 }
