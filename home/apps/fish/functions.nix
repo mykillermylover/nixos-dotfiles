@@ -26,6 +26,15 @@
       description = "Wrap Nix rebuild function with monitor";
     };
 
+    nix-hash-sri = {
+      body = ''
+        nix hash convert --to sri --hash-algo sha256 $(nix-prefetch-url $argv)
+      '';
+
+      wraps = "nix-prefetch-url";
+      description = "Prefetch nix deps and convert to SRI hash";
+    };
+
     gitignore = "curl -sL https://www.gitignore.io/api/$argv";
   };
 }

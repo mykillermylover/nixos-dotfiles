@@ -31,6 +31,8 @@ in
       squadus
       # in nixpkgs old version
       lens
+      # Deno Version Manager
+      dvm
 
       # My ags shell
       # Wrapper let pass custom args to shell
