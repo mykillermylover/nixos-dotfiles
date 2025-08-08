@@ -11,6 +11,7 @@
     ./jetbrains-toolbox.nix
     ./zoxide.nix
     ./direnv.nix
+    ./swappy.nix
 
     ./packages-list.nix
     ./xdg-mimeapps.nix

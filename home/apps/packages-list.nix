@@ -75,7 +75,6 @@ in
       file
       which
       gnupg
-      swappy
       zip
       unzip
       p7zip
