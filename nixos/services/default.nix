@@ -3,6 +3,8 @@
   imports = [
     # SDDM
     ./sddm.nix
+
+    ./tlp.nix
   ];
 
   services = {

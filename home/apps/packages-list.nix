@@ -82,6 +82,8 @@ in
       killall
       desktop-file-utils
       tldr
+      wf-recorder
+      slurp
 
       # nix utils
       nix-output-monitor

@@ -39,6 +39,8 @@
       gst_all_1.gst-plugins-ugly
       gst_all_1.gstreamer
       gtk2
+      gtk3
+      gtk4
       harfbuzz
       icu
       keyutils.lib
