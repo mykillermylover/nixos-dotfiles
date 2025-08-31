@@ -4,7 +4,7 @@ let
     owner = "Smoren";
     repo = "huawei-ubuntu-sound-fix";
     rev = "master";
-    sha256 = "sha256-3JYbyDzGbIhu9C5T4CEltpiZW6HAuituuDD/taSPkU8=";
+    sha256 = "sha256-iie769azb5eebA8vGfI6/s6mTKCUMuEUWNFIFiRLozI=";
   };
 
   huawei-sound-fix = pkgs.stdenv.mkDerivation {

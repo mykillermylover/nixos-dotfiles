@@ -23,7 +23,9 @@
         text = lib.generators.toINI { } {
           Appearance = {
             icon_theme = "Colloid-Dark";
-            style = "kvantum";
+            style = "kvantum-dark";
+            custom_palette = true;
+            color_scheme_path="${pkgs.graphite-kde-theme}/share/color-schemes/GraphiteDark.colors";
           };
         };
       };
@@ -33,7 +35,9 @@
         text = lib.generators.toINI { } {
           Appearance = {
             icon_theme = "Colloid-Dark";
-            style = "kvantum";
+            style = "kvantum-dark";
+            custom_palette = true;
+            color_scheme_path="${pkgs.graphite-kde-theme}/share/color-schemes/GraphiteDark.colors";
           };
         };
       };

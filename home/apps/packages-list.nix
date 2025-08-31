@@ -84,6 +84,7 @@ in
       tldr
       wf-recorder
       slurp
+      gdu
 
       # nix utils
       nix-output-monitor
