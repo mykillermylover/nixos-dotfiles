@@ -47,6 +47,14 @@
       description = "Remove entry from fish_user_paths";
     };
 
+    to_copy = {
+      body = ''
+        command $argv | wl-copy
+      '';
+      wraps = "command";
+      description = "any command piped to wl-copy";
+    };
+
     gitignore = "curl -sL https://www.gitignore.io/api/$argv";
   };
 }

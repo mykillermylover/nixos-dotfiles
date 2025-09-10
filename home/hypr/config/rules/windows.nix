@@ -28,6 +28,7 @@
       "pin, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
 
       # Dialog windows – float+center these windows.
+      # Center:
       "center, title:^(Open File)(.*)$"
       "center, title:^(Select a File)(.*)$"
       "center, title:^(Choose wallpaper)(.*)$"
@@ -38,7 +39,9 @@
       "center, title:^(File Operation Progress)(.*)$"
       "center, title:^(Rename)(.*)$"
       "center, class:^(xdg-desktop-portal-gtk)$"
+      "center, class:^(nm-connection-editor)$, title:^(Editing)(.*)$"
       
+      # Float:
       "float,  title:^(Open File)(.*)$"
       "float,  title:^(Select a File)(.*)$"
       "float,  title:^(Choose wallpaper)(.*)$"
@@ -47,9 +50,11 @@
       "float,  title:^(Library)(.*)$"
       "float,  title:^(File Upload)(.*)$"
       "float,  title:^(File Operation Progress)(.*)$"
-      "float, title:^(Rename)(.*)$"
+      "float,  title:^(Rename)(.*)$"
       "float,  class:^(xdg-desktop-portal-gtk)$"
-      #
+      "float,  class:^(nm-connection-editor)$, title:^(Editing)(.*)$"
+
+      # Obsidian
       "opacity 0.999999, initialClass:obsidian"
     ];
   };

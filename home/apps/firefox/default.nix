@@ -72,7 +72,8 @@
 
       patchedChrome = pkgs.runCommand "wavefox-chrome" { } ''
         mkdir -p "$out"
-        cp -r --no-preserve=mode ${inputs.WaveFox}/chrome/* "$out"
+        ls ${inputs.WaveFox}
+        cp -r --no-preserve=mode ${inputs.WaveFox}/* "$out"
 
         # Add extra css to userChrome.css:        
         cat >> "$out/userChrome.css" <<EOF

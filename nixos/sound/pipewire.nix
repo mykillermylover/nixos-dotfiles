@@ -11,5 +11,12 @@
 
     wireplumber.enable = true;
     jack.enable = true;
+
+    extraConfig.pipewire = {
+      default."clock.allowed-rates" = [
+        44100
+        48000
+      ];
+    };
   };
 }

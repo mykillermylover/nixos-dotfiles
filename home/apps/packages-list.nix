@@ -25,6 +25,9 @@ in
       google-chrome
       onlyoffice-desktopeditors
       arduino-ide
+      wineWowPackages.stagingFull
+      winetricks
+      gamemode
 
       # Apps from local repo
       ktalk
@@ -85,6 +88,8 @@ in
       wf-recorder
       slurp
       gdu
+      rename
+      lazygit
 
       # nix utils
       nix-output-monitor
