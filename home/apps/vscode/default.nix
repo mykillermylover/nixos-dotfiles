@@ -19,6 +19,7 @@
 
           pkief.material-icon-theme
           monokai.theme-monokai-pro-vscode
+          bmalehorn.vscode-fish
         ])
         ++ (with pkgs.vscode-marketplace-release; [
           github.copilot

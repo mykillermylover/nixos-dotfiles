@@ -28,6 +28,7 @@ in
       wineWowPackages.stagingFull
       winetricks
       gamemode
+      obsidian
 
       # Apps from local repo
       ktalk

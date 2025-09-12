@@ -37,22 +37,35 @@
 
     fish_remove_path = {
       body = ''
-        function remove_path
-          if set -l index (contains -i "$argv" $fish_user_paths)
-            set -e fish_user_paths[$index]
-            echo "Removed $argv from the path"
-          end
+        if set -l index (contains -i "$argv" $fish_user_paths)
+          set -e fish_user_paths[$index]
+          echo "Removed $argv from the path"
         end
       '';
       description = "Remove entry from fish_user_paths";
     };
 
-    to_copy = {
-      body = ''
-        command $argv | wl-copy
+    copy = {
+      body = /*sh*/''
+        if test (count $argv) -eq 0
+          echo "Usage: to_copy <cmd|path> [args...]" >&2
+          return 1
+        end
+
+        set -l first $argv[1]
+
+        if test -f $first
+          # arg is file
+          cat $argv | wl-copy -n
+        else if command -v $first >/dev/null
+          # arg is command
+          command $argv | wl-copy -n
+        else
+          echo "Error: '$first' is not a path or a command" >&2
+          return 1
+        end
       '';
-      wraps = "command";
-      description = "any command piped to wl-copy";
+      description = "any command or path piped to wl-copy";
     };
 
     gitignore = "curl -sL https://www.gitignore.io/api/$argv";

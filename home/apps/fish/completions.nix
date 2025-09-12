@@ -451,10 +451,36 @@ let
     # otherwise we use the -k flag
     complete -k -c buf -n '__buf_requires_order_preservation && __buf_prepare_completions' -f -a '$__buf_comp_results'
   '';
+  copy_completions = /*sh*/''
+    # completions for copy
+    function __copy_first_is_command
+        set -l toks (commandline -opc)
+
+        if test (count $toks) -lt 2
+            return 1
+        end
+        
+        set -l first $toks[2]
+        
+        if test -z "$first"
+            return 1
+        end
+        
+        if command -v $first >/dev/null
+            return 0
+        end
+        
+        return 1
+    end
+
+    complete -c copy -n 'not __copy_first_is_command' -a "(__fish_complete_path)"
+    complete -c copy -n '__copy_first_is_command' -a "(__fish_complete_subcommand)"
+  '';
 in
 lib.concatLines [
   tldr_completions
   dvm_completins
   perl_rename_completions
   buf_completions
+  copy_completions
 ]
