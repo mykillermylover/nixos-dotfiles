@@ -10,7 +10,7 @@
     in
     {
       enable = true;
-      package = pkgs.rofi-wayland;
+      package = pkgs.rofi;
 
       ############
       ### MAIN ###

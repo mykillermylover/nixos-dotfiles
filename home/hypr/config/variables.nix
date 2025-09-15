@@ -10,10 +10,6 @@
     "$shiftMod" = "SUPER_SHIFT";
     "$ctrlMod" = "SUPER_CTRL";
 
-    ## Monitors
-    "$builtInMon" = builtInMon;
-    "$externalMon" = externalMon;
-
     ## Programs
     "$terminal" = "kitty";
     "$browser" = "firefox";

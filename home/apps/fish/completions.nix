@@ -1,6 +1,6 @@
 { lib, ... }:
 let
-  tldr_completions = ''
+  tldr = ''
     # TLDR https://github.com/tldr-pages/tldr-python-client/issues/183
     complete -c tldr -s h -l help                    -d "show this help message" -f
     complete -c tldr -s v -l version                 -d "show program's version number" -f
@@ -22,7 +22,7 @@ let
     complete -f -c tldr -a "(__tldr_commands)"
   '';
 
-  dvm_completins = ''
+  dvm = ''
     # DVM https://github.com/justjavac/dvm
 
     # Print an optspec for argparse to handle cmd's options that are independent of any subcommand.
@@ -199,7 +199,7 @@ let
     complete -c dvm -n "__fish_dvm_using_subcommand help; and __fish_seen_subcommand_from registry" -f -a "binary" -d 'Binary registry operations'
     complete -c dvm -n "__fish_dvm_using_subcommand help; and __fish_seen_subcommand_from registry" -f -a "version" -d 'Version registry operations'
   '';
-  perl_rename_completions = ''
+  perl_rename = ''
     complete -c rename -s b -l backup                 -d "make backup before removal" -f
     complete -c rename -s B -l prefix                 -d "set backup filename prefix" -r
     complete -c rename -s f -l force                  -d "remove existing destinations, never prompt" -f
@@ -214,7 +214,7 @@ let
     complete -c rename -l version                     -d "output version information and exit" -f
   '';
 
-  buf_completions = ''
+  buf = ''
         # fish completion for buf                                  -*- shell-script -*-
 
     function __buf_debug
@@ -451,7 +451,7 @@ let
     # otherwise we use the -k flag
     complete -k -c buf -n '__buf_requires_order_preservation && __buf_prepare_completions' -f -a '$__buf_comp_results'
   '';
-  copy_completions = /*sh*/''
+  copy = ''
     # completions for copy
     function __copy_first_is_command
         set -l toks (commandline -opc)
@@ -476,11 +476,28 @@ let
     complete -c copy -n 'not __copy_first_is_command' -a "(__fish_complete_path)"
     complete -c copy -n '__copy_first_is_command' -a "(__fish_complete_subcommand)"
   '';
+  unimatrix = ''
+    complete -c unimatrix -s a -l asynchronous          -d "Asynchronous scroll. Lines will move at varied speeds." -f
+    complete -c unimatrix -s b -l all-bold              -d "Use only bold characters" -f
+    complete -c unimatrix -s c -l color                 -d "One of: green (default), red, blue, white, yellow, cyan, magenta, black" -fr
+    complete -c unimatrix -s f -l flashers              -d "Enable "flashers," characters that continuously change." -f
+    complete -c unimatrix -s g -l bg-color              -d "Background color (See -c). Defaults to keeping terminal's current background." -fr
+    complete -c unimatrix -s h -l help                  -d "Show this help message and exit" -f
+    complete -c unimatrix -s i -l ignore-keyboard       -d "Ignore keyboard" -f
+    complete -c unimatrix -s l -l character-list        -d "Select character set(s) using a string over letter codes (see CHARACTER SETS in help.)" -fr
+    complete -c unimatrix -s n -l no-bold               -d "Do not use bold characters (overrides -b)" -f
+    complete -c unimatrix -s o -l status-off            -d "Disable on-screen status" -f
+    complete -c unimatrix -s s -l speed                 -d "Integer up to 100. 0 uses a one-second delay before refreshing, 100 uses none. Use negative numbers for even lower speeds. Default=85" -f
+    complete -c unimatrix -s t -l time                  -d "Exit the process after TIME seconds" -f
+    complete -c unimatrix -s u -l custom-characters     -d "Your own string of characters to display. Enclose in single quotes (''') to escape special characters. For example: -u '#\$('" -f
+    complete -c unimatrix -s w -l single-wave           -d "Single-wave mode: Does a single burst of green rain, exits. You can put in a .bashrc file to run when your terminal launches. Works well with speed at 95." -fr
+  '';
 in
 lib.concatLines [
-  tldr_completions
-  dvm_completins
-  perl_rename_completions
-  buf_completions
-  copy_completions
+  tldr
+  dvm
+  perl_rename
+  buf
+  copy
+  unimatrix
 ]

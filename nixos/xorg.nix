@@ -8,10 +8,10 @@
 
     xrandrHeads = with globals.const; [
       {
-        output = externalMon;
+        output = externalMon.name;
         primary = true;
       }
-      builtInMon
+      builtInMon.name
     ];
   };
 }

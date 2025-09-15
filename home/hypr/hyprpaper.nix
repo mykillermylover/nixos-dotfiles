@@ -10,8 +10,8 @@
       preload = [wallpaper];
 
       wallpaper = with globals.const; [
-        "${externalMon}, ${wallpaper}"
-        "${builtInMon}, ${wallpaper}"
+        "${externalMon.name}, ${wallpaper}"
+        "${builtInMon.name}, ${wallpaper}"
       ];
     };
   };

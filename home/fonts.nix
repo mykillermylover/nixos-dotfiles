@@ -18,6 +18,7 @@
     corefonts
     vistafonts
     noto-fonts-color-emoji
+    noto-fonts-cjk-sans
     meslo-lgs-nf
     nerd-fonts.meslo-lg
     nerd-fonts.jetbrains-mono

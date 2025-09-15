@@ -1,14 +1,34 @@
-{ ... }:
+{ globals, lib, ... }:
 {
-  wayland.windowManager.hyprland.settings = {
-    ################
-    ### MONITORS ###
-    ################
+  wayland.windowManager.hyprland.settings =
+    with globals.const;
+    let
+      getMonConfig =
+        {
+          name,
+          res,
+          framerate,
+          scale,
+          position ? "auto",
+        }:
+        lib.concatStringsSep ", " (
+          map toString [
+            name
+            "${res}@${toString framerate}"
+            position
+            scale
+          ]
+        );
+    in
+    {
+      ################
+      ### MONITORS ###
+      ################
 
-    # See https://wiki.hyprland.org/Configuring/Monitors/
-    monitor = [
-      "$builtInMon,  2520x1680@60, auto, 2" # 1.5
-      "$externalMon, 1920x1080@75, auto-right, 1"
-    ];
-  };
+      # See https://wiki.hyprland.org/Configuring/Monitors/
+      monitor = [
+        (getMonConfig builtInMon)
+        (getMonConfig externalMon)
+      ];
+    };
 }
