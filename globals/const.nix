@@ -9,7 +9,7 @@
   builtInMon = {
     name = "eDP-1";
     res = "2520x1680";
-    scale = 1.5;
+    scale = 2;
     framerate = 60;
     position = "auto";
   };

@@ -12,6 +12,7 @@
     ./zoxide.nix
     ./direnv.nix
     ./swappy.nix
+    ./scrcpy.nix
 
     ./packages-list.nix
     ./xdg-mimeapps.nix

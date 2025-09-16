@@ -9,6 +9,7 @@
     ./hypr
     ./themes
     ./services
+    ./ssh.nix
   ];
 
   home = rec {
