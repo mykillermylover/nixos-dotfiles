@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs = {
     hyprland.enable = true;
@@ -13,6 +13,12 @@
       enableSSHSupport = true;
     };
 
-    steam.enable = true;
+    steam = {
+      enable = true;
+      extraCompatPackages = with pkgs; [
+        proton-ge-bin
+      ];
+      extest.enable = true;
+    };
   };
 }

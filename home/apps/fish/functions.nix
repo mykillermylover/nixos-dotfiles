@@ -20,7 +20,7 @@
 
     nixup = {
       body = ''
-        sudo bash -c "cd $HOME && nixos-rebuild switch $argv --log-format internal-json -v |& nom --json"
+        bash -c "cd $HOME && sudo nixos-rebuild switch $argv --log-format internal-json -v |& nom --json"
       '';
       wraps = "nixos-rebuild switch";
       description = "Wrap Nix rebuild function with monitor";
@@ -46,7 +46,7 @@
     };
 
     copy = {
-      body = /*sh*/''
+      body = ''
         if test (count $argv) -eq 0
           echo "Usage: to_copy <cmd|path> [args...]" >&2
           return 1

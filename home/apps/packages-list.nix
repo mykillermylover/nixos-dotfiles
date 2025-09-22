@@ -29,6 +29,7 @@ in
       winetricks
       gamemode
       obsidian
+      insomnia
 
       # Apps from local repo
       ktalk

@@ -4,7 +4,7 @@
     res = "1920x1080";
     scale = 1;
     framerate = 75;
-    position = "auto-right";
+    position = "auto-left";
   };
   builtInMon = {
     name = "eDP-1";
