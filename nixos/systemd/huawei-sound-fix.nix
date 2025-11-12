@@ -20,6 +20,7 @@ in
 {
   systemd.services.huawei-sound-fix = {
     wantedBy = [ "multi-user.target" ];
+    after = [ "sound.target" ];
     description = "Huawei soundcard headphones monitor";
 
     path = with pkgs; [
