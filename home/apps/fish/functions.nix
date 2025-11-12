@@ -22,7 +22,7 @@
       body = ''
         bash -c "cd $HOME && sudo nixos-rebuild switch $argv --log-format internal-json -v |& nom --json"
       '';
-      wraps = "nixos-rebuild switch";
+      wraps = "nixos-rebuild";
       description = "Wrap Nix rebuild function with monitor";
     };
 

@@ -51,6 +51,8 @@
       cat = "bat";
 
       ff = "fastfetch";
+      
+      py = "python";
     };
   };
 }
