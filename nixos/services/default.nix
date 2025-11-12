@@ -29,5 +29,7 @@
     gnome.gcr-ssh-agent.enable = true;
 
     blueman.enable = true;
+
+    throttled.enable = true;
   };
 }
