@@ -30,14 +30,19 @@ in
       gamemode
       obsidian
       insomnia
+      drawio
+      anydesk
 
-      # Apps from local repo
+      ### Apps from local repo
       ktalk
       squadus
       # in nixpkgs old version
       lens
       # Deno Version Manager
       dvm
+      # Deno-written downloads sorter
+      # downloads-sorter
+      ###
 
       # My ags shell
       # Wrapper let pass custom args to shell
@@ -111,7 +116,7 @@ in
             name ? "default",
             ...
           }:
-          packages.${pkgs.system}.${name};
+          packages.${pkgs.stdenv.hostPlatform.system}.${name};
 
       in
       map default [
