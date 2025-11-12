@@ -11,7 +11,9 @@
         output = externalMon.name;
         primary = true;
       }
-      builtInMon.name
+      {
+        output = builtInMon.name;
+      }
     ];
   };
 }
