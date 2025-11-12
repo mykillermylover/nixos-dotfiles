@@ -11,7 +11,7 @@
     "$ctrlMod" = "SUPER_CTRL";
 
     ## Programs
-    "$terminal" = "kitty";
+    "$terminal" = "kitty --single-instance";
     "$browser" = "firefox";
     "$fileManager" = "thunar";
     "$menu" = "rofi -show drun";

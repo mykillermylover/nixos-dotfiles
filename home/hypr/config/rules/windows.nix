@@ -16,8 +16,9 @@
       "suppressevent maximize, class:^(.*)$"
 
       # Open jetbrains apps on 4 workspace
-      "noinitialfocus, class:^(jetbrains-.*)$"
-      "workspace 4, class:^(jetbrains-.*)$"
+      # "noinitialfocus, class:^(jetbrains-.*)$"
+      # "workspace 4, class:^(jetbrains-.*)$"
+      # "stayfocused, class:^(jetbrains-.*)$"
 
       # Picture-in-Picture
       "float, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
