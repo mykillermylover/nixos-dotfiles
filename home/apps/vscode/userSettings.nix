@@ -5,7 +5,7 @@
   "git.enableCommitSigning" = true;
   "git.allowForcePush" = true;
 
-  "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'MesloLGS Nerd Font', monospace";
+  "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'JetBrainsMono Nerd Font', 'MesloLGS Nerd Font', monospace";
   "editor.fontLigatures" = true;
   "editor.tabSize" = 2;
 
@@ -41,6 +41,8 @@
   };
   "workbench.iconTheme" = "material-icon-theme";
   "workbench.colorTheme" = "Monokai Pro (Filter Spectrum)";
+  
+  "explorer.confirmDragAndDrop" = false;
 
   # Disable italic font
   "editor.tokenColorCustomizations" = {
