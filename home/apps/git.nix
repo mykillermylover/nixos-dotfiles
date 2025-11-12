@@ -2,8 +2,6 @@
 {
   programs.git = {
     enable = true;
-    userName = "makulenko";
-    userEmail = "makulenko@rvision.ru";
 
     signing = {
       format = "openpgp";
@@ -12,8 +10,12 @@
       signer = "${pkgs.gnupg}/bin/gpg";
     };
 
-    extraConfig = { 
+    settings = {
       init.defaultBranch = "main";
+      user = {
+        name = "makulenko";
+        email = "makulenko@rvision.ru";
+      };
     };
   };
 }

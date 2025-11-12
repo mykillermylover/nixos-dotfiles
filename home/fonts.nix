@@ -16,11 +16,12 @@
   home.packages = with pkgs; [
     noto-fonts
     corefonts
-    vistafonts
+    vista-fonts
     noto-fonts-color-emoji
     noto-fonts-cjk-sans
     meslo-lgs-nf
     nerd-fonts.meslo-lg
     nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
   ];
 }
