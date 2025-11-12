@@ -1,4 +1,8 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 let
   sddm-astronaut = pkgs.sddm-astronaut.override {
     themeConfig = {
@@ -18,13 +22,20 @@ in
       package = pkgs.kdePackages.sddm;
 
       settings = {
-        Theme.Current = "sddm-astronaut-theme";
+        Theme = {
+          Current = "sddm-astronaut-theme";
+          CursorTheme = "BreezeX-RosePine-Linux";
+          CursorSize = 24;
+        };
+        General = {
+          GreeterEnvironment = "QT_WAYLAND_SHELL_INTEGRATION=layer-shell,XCURSOR_THEME=BreezeX-RosePine-Linux,XCURSOR_SIZE=24";
+        };
       };
 
       wayland = {
         enable = true;
-        # Needs to open sddm 
-        # on every display connected 
+        # Needs to open sddm
+        # on every display connected
         # with correct dpi
         compositor = "kwin";
       };

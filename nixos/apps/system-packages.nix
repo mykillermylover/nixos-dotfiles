@@ -18,6 +18,7 @@
     adwaita-icon-theme
     adwaita-icon-theme-legacy
     adwaita-fonts
+    kdePackages.breeze
 
     alsa-tools
     alsa-utils
