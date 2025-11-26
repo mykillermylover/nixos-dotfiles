@@ -30,6 +30,6 @@
 
     blueman.enable = true;
 
-    throttled.enable = true;
+    # throttled.enable = true;
   };
 }

@@ -41,6 +41,8 @@
 
           # Wayland
           "widget.wayland_vsync.enabled" = true;
+          "widget.disable-popup-positioning" = true;
+          "widget.use-xdg-popup-for-context-menus" = false;
         };
     };
   };
@@ -48,27 +50,27 @@
   # Apply WaveFox with additional css
   home.file.".mozilla/firefox/default/chrome" =
     let
-      extraCss = /*css*/ ''
-          .tabbrowser-tab:hover {
-            .tab-background:not([selected], [multiselected]) {
-                background-image: none !important;
-                background-color: rgba(15, 15, 15, 0.33) !important;
-            }
-          }
-          .tab-background:is([selected], [multiselected]) {
+      extraCss = /* css */ ''
+        .tabbrowser-tab:hover {
+          .tab-background:not([selected], [multiselected]) {
               background-image: none !important;
-              background-color: rgba(0, 0, 0, 0.5) !important;
+              background-color: rgba(15, 15, 15, 0.33) !important;
           }
+        }
+        .tab-background:is([selected], [multiselected]) {
+            background-image: none !important;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
 
-          #urlbar[open] #urlbar-background {
-              background-image: none !important;
-              background-color: rgba(25, 25, 25, 0.95) !important;
-          }
+        #urlbar[open] #urlbar-background {
+            background-image: none !important;
+            background-color: rgba(25, 25, 25, 0.95) !important;
+        }
 
-          #star-button[starred] {
-              fill: white !important;
-          }
-        '';
+        #star-button[starred] {
+            fill: white !important;
+        }
+      '';
 
       patchedChrome = pkgs.runCommand "wavefox-chrome" { } ''
         mkdir -p "$out"

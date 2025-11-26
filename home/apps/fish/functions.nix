@@ -68,6 +68,29 @@
       description = "any command or path piped to wl-copy";
     };
 
+    mkcd = {
+      body = ''
+        mkdir -p $argv
+
+        if test -d "$argv"
+          cd "$argv"
+        else if test -d "./$argv"
+          cd "./$argv"
+        end
+      '';
+
+      description = "Make directory and go in it";
+    };
+
+    cdtmp = {
+      body = ''
+        set -l tmp_dir $(mktemp -d)
+        cd $tmp_dir
+      '';
+
+      description = "Make temp directory and cd";
+    };
+
     gitignore = "curl -sL https://www.gitignore.io/api/$argv";
   };
 }

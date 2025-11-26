@@ -30,7 +30,6 @@
 
     firmware = with pkgs; [
       sof-firmware
-      alsa-firmware
     ];
   };
 }

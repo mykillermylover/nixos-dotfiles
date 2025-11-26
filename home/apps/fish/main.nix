@@ -33,6 +33,10 @@
 
         # Custom completions
         ${fish_completions}
+
+        for command in "ls" "cat" "tree"
+            complete -e -c $command
+        end
       '';
 
     interactiveShellInit = ''
@@ -51,8 +55,12 @@
       cat = "bat";
 
       ff = "fastfetch";
-      
+
       py = "python";
+
+      tree = "broot";
+
+      nats-ui = "docker run -p 31311:31311 -v $HOME/.nats-ui/db:/db -v $HOME/.nats-ui/nats-creds:/nats-creds:ro ghcr.io/nats-nui/nui";
     };
   };
 }

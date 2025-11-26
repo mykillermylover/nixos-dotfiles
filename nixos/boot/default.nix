@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  config,
+  ...
+}:
 {
   # Bootloader.
   boot = {
@@ -14,6 +18,14 @@
     # Use latest kernel.
     kernelPackages = pkgs.linuxPackages_latest;
 
+    extraModulePackages = with config.boot.kernelPackages; [
+      v4l2loopback
+    ];
+
+    kernelModules = [
+      "v4l2loopback"
+    ];
+
     kernel = {
       sysctl."net.ipv4.ip_forward" = "1";
       sysctl."net.ipv6.conf.all.forwarding" = "1";
@@ -24,13 +36,14 @@
       "i915.enable_psr=1" # Panel Self Refresh for power savings
       "i915.enable_fbc=1" # Framebuffer compression
       "i915.fastboot=1" # Skip unnecessary mode sets at boot
-      "mem_sleep_default=deep" # Allow deepest sleep states
+      "mem_sleep_default=shallow" # Allow shallow sleep state
       "i915.enable_dc=2" # Display power saving
       "nvme.noacpi=1" # Helps with NVME power consumption
     ];
 
     extraModprobeConfig = ''
       options hid_apple fnmode=0
+      options v4l2loopback exclusive_caps=1 video_nr=10
     '';
   };
 }

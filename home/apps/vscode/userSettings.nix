@@ -5,9 +5,12 @@
   "git.enableCommitSigning" = true;
   "git.allowForcePush" = true;
 
-  "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'JetBrainsMono Nerd Font', 'MesloLGS Nerd Font', monospace";
+  "editor.fontFamily" =
+    "'FiraCode Nerd Font Mono', 'JetBrainsMono Nerd Font', 'MesloLGS Nerd Font', monospace";
   "editor.fontLigatures" = true;
   "editor.tabSize" = 2;
+  "editor.fontSize" = 15;
+  "editor.semanticHighlighting.enabled" = true;
 
   "terminal.integrated.fontFamily" = "'MesloLGS Nerd Font', monospace";
   "terminal.explorerKind" = "both";
@@ -41,8 +44,19 @@
   };
   "workbench.iconTheme" = "material-icon-theme";
   "workbench.colorTheme" = "Monokai Pro (Filter Spectrum)";
-  
+
   "explorer.confirmDragAndDrop" = false;
+  "[typescript]" = {
+    "editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "editor.semanticHighlighting.enabled" = true;
+  };
+  
+  "[javascript]" = {
+    "editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "editor.semanticHighlighting.enabled" = true;
+  };
+
+  "nixEnvSelector.useFlakes" = true;
 
   # Disable italic font
   "editor.tokenColorCustomizations" = {

@@ -14,7 +14,7 @@
 
       "ktalk -hidden"
       "[workspace 3 silent] squadus"
-      "[workspace special silent] Telegram"
+      "[workspace special silent] AyuGram"
 
       # clipboard manager
       "wl-paste --watch cliphist store"

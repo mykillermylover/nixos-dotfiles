@@ -12,7 +12,7 @@ in
 {
   home.packages =
     (with pkgs; [
-      telegram-desktop
+      ayugram-desktop
       pwvucontrol
       networkmanagerapplet
       openvpn
@@ -31,7 +31,12 @@ in
       obsidian
       insomnia
       drawio
-      anydesk
+      vlc
+
+
+      v4l-utils
+      ffmpeg-full
+      obs-studio
 
       ### Apps from local repo
       ktalk
@@ -42,6 +47,10 @@ in
       dvm
       # Deno-written downloads sorter
       # downloads-sorter
+      
+      # vlc-wayland
+
+      # evo-agent
       ###
 
       # My ags shell
@@ -97,6 +106,8 @@ in
       gdu
       rename
       lazygit
+      ripgrep
+      broot
 
       # nix utils
       nix-output-monitor

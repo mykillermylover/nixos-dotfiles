@@ -4,8 +4,6 @@
     # auto-generated
     ./hardware-configuration.nix
 
-    ./boot.nix
-    ./hardware.nix
     ./networking.nix
     ./nix.nix
     ./users.nix
@@ -14,9 +12,11 @@
     ./security.nix
     ./xorg.nix
 
+    ./boot
     ./apps
     ./environment
     ./nixpkgs
+    ./hardware
     ./services
     ./systemd
     ./sound
