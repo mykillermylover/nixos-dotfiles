@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   services.pipewire = {
     enable = true;
@@ -9,7 +9,9 @@
       support32Bit = true;
     };
 
-    wireplumber.enable = true;
+    wireplumber = {
+      enable = true;
+    };
     jack.enable = true;
 
     extraConfig.pipewire = {
